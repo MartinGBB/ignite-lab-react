@@ -6,7 +6,7 @@ export function Event() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="flex">
         <Video />
         <Sidebar />
       </main>
