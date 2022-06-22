@@ -1,7 +1,15 @@
 import { Header } from "../components/Header";
+import { Sidebar } from "../components/Sidebar";
+import { Video } from "../components/Video";
 
 export function Event() {
   return (
-    <h1>hello world</h1>
+    <div>
+      <Header />
+      <main>
+        <Video />
+        <Sidebar />
+      </main>
+    </div>
   )
 }
