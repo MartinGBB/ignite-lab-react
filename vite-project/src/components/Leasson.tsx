@@ -11,7 +11,7 @@ export function Lesson(props: LessonProps) {
   return (
     <a href="#">
       <span>
-        Segunda • 21 de junho • 19h00
+        { props. availableAt.toString() }
       </span>
 
       <div className="rounded border border-gray-500 p-4 mt-2">
@@ -21,12 +21,12 @@ export function Lesson(props: LessonProps) {
             Conteúdo liberado
           </span>
           <span className="text-xs rounded px-2 py-[0.125rem] text-white border border-green-300">
-            AO VIVO
+            { props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA' }
           </span>
         </header>
 
         <strong className="text-gray-200 mt-5 block">
-          Abertura do evento Ignite labs
+          { props.type }
         </strong>
       </div>
     </a>
