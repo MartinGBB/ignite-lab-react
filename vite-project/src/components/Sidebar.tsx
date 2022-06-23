@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import { Lesson } from "./Leasson";
+import { isPast } from 'date-fns';
 
 const GET_LESSONS_QUERY = gql`
   query MyQuery {
