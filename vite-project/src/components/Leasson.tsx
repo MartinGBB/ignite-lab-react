@@ -15,12 +15,12 @@ export function Lesson(props: LessonProps) {
   const availableDateFormatted = format(props.availableAt, FORMAT_DATE, { locale: ptBR })
 
   return (
-    <a href="#">
+    <a href="#" className="group">
       <span>
         { availableDateFormatted }
       </span>
 
-      <div className="rounded border border-gray-500 p-4 mt-2">
+      <div className="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
         <header className="flex justify-between items-center">
           { isLessonAvailable ? (
             <span className="text-sm text-blue-500 font-medium flex item-center gap-2">
