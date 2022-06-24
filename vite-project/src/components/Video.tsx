@@ -42,7 +42,13 @@ export function Video(props: VideoProps) {
     }
   });
 
-  console.log(data)
+  if (!data) {
+    return (
+      <div className="flex-1">
+        <h1>Loading</h1>
+      </div>
+    )
+  }
 
   return (
     <div className="flex-1">
