@@ -54,9 +54,9 @@ export function Video(props: VideoProps) {
     <div className="flex-1">
       <div className="bg-black flex justify-center">
        
-       <div className="h-full w-full w-max-w-[1100px] max-h-[60vh] aspect-video">
+       <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
         <Player>
-          <Youtube videoId="Ox_zb2cs9zM"/>
+          <Youtube videoId={ data.lesson.videoId } />
           <DefaultUi />
         </Player>
        </div>
@@ -67,25 +67,25 @@ export function Video(props: VideoProps) {
         <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
-              Aula -1 - Abertura do Ignite Lab
+              { data.lesson.title }
             </h1>
             <p className="mt-4 text-gray-400 leading-relaxed">
-              Nessa aula vamos dar início ao projeto criando a estrutura base da aplicação utilizando ReactJS, Vite e TailwindCSS. Vamos também realizar o setup do nosso projeto no GraphCMS criando as entidades da aplicação e integrando a API GraphQL gerada pela plataforma no nosso front-end utilizando Apollo Client.
+              { data.lesson.description }
             </p>
 
             <div className="flex items-center gap-4 mt-6">
               <img
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
-              src="https://github.com/MartinGBB.png"
+              src={ data.lesson.teacher.avatarURL }
                 alt="Professor"
               />
 
               <div className="leading-relaxed">
                 <strong className="font-bold text-2xl block">
-                  Martin Brazon
+                  { data.lesson.teacher.name }
                 </strong>
                 <span className="text-gray-200 text-sm block">
-                  Dev Full Stack
+                { data.lesson.teacher.bio }
                 </span>
               </div>
             </div>
