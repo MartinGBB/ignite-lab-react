@@ -40,7 +40,7 @@ export function Lesson(props: LessonProps) {
         </header>
 
         <strong className="text-gray-200 mt-5 block">
-          { props.type }
+          { props.title }
         </strong>
       </div>
     </Link>
