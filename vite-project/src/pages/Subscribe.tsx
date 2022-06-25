@@ -1,13 +1,30 @@
+import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { Logo } from "../components/Logo";
+
+const CREATE_SUBSCRIBER_MUTATION = gql`
+  mutation CreateSubscriber($name: String!, $email: String!) {
+    createSubscriber(data: {name: $name, email: $email}) {
+      id
+    }
+  }
+`
 
 export function Subscribe() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const [createSubscriber] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+
   function handleSubscribe(event: FormEvent) {
-    event.preventDefault()
-    console.log(name, email)
+    event.preventDefault();
+    
+    createSubscriber({
+      variables: {
+        name,
+        email
+      }
+    })
   }
 
   return (
