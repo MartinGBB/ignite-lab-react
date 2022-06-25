@@ -1,5 +1,7 @@
 export function Subscribe() {
   return (
-    <h1>subscribe</h1>
+    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex-col items-center">
+      
+    </div>
   )
 }
