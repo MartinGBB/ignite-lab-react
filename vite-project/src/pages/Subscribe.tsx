@@ -37,18 +37,18 @@ export function Subscribe() {
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto sm:block">
-        <div className="max-w-[640px]">
+        <div className="max-w-[640px] sm:mb-8 sm:max-w-[400px] sm:justify-center sm:m-auto ">
           <Logo />
-          <h1 className="mt-8 text-[2.5rem] leading-tight">
+          <h1 className="mt-8 text-[2.5rem] leading-tight sm:mb-6 sm:mt-6 sm:text-center">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
           </h1>
-          <p className="mt-4 text-gray-200 leading-relaxed">
+          <p className="mt-4 text-gray-200 leading-relaxed sm:text-center">
             Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
           </p>
         </div>
 
         <div className="p-8 bg-gray-700 border border-gray-500 rounded sm:border-x-0 sm:p-8">
-          <strong className="text-2xl mb-6 block">Insceva-se gratuitamente</strong>
+          <strong className="text-2xl mb-6 block sm:mb-8">Insceva-se gratuitamente</strong>
 
           <form onSubmit={ handleSubscribe } className="flex flex-col gap-2 w-full">
             <input
